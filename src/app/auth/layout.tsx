@@ -4,9 +4,9 @@ export default function RootLayout({children}: Readonly<{children: React.ReactNo
   return (
     <>
     <div className="flex">
-      <div className="w-full min-h-screen bg-gray-100">
+      <main className="w-full min-h-screen bg-gray-100">
         {children}
-      </div>
+      </main>
     </div>
     <ToastNotification />
     </>

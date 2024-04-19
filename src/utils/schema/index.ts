@@ -4,7 +4,7 @@ export const RegisterSchema = z.object({
   username: z.string().trim().min(1, 'El nombre es obligatorio.'),
   email: z.string().email({ message: 'El email obligatorio'}),
   password: z.string().min(6, 'La contraseña debe contener al menos 6 caracteres'),
-  confirmpassword: z.string().min(6)
+  confirmpassword: z.string().min(6,'Las contraseña debe contener al menos 6 caracteres.')
 }).refine(
   (values) => {
     return values.password === values.confirmpassword;

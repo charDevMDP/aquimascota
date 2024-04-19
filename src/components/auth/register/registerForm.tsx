@@ -1,4 +1,5 @@
 'use client'
+import { register } from '@/actions/auth.actions'
 import { RegisterSchema } from '@/utils/schema'
 import Link from 'next/link'
 import React, { useTransition } from 'react'
@@ -29,8 +30,16 @@ const RegisterForm = () => {
      
      startTransition(() => {
       
-      // llamar accion para registrar usuario
+      register(result.data).then((response:any) => {
+
+        if(response.error){
+          toast.error(response.error)
+          return
+        }
   
+        toast.success(response.success)
+    
+      })
   
     })
   }
