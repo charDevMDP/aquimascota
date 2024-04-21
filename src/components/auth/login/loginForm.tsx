@@ -1,4 +1,5 @@
 'use client'
+import { login } from '@/actions/auth.actions'
 import { LoginSchema } from '@/utils/schema'
 import Link from 'next/link'
 import React, { useTransition } from 'react'
@@ -29,7 +30,14 @@ const LoginForm = () => {
 
      startTransition(() => {
       
-      // llamar accion para login de usuario
+      login(result.data).then((response:any) => {
+
+        if(response.error){
+          toast.error(response.error)
+          return
+        }
+    
+      })
   
   
     })
