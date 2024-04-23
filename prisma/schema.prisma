@@ -32,12 +32,25 @@ model Account {
 model User {
   id            String    @id @default(cuid())
   name          String?
-  email         String?   @unique
+  email         String   @unique
   emailVerified DateTime? @map("email_verified")
   password      String?
   image         String?
   accounts      Account[]
+  posts         Post[]
  
   @@map("users")
 }
  
+model Post {
+  id          Int @id @default(autoincrement())
+  name        String
+  image       String
+  typePost    String
+  typePet     String
+  locationView String
+  dateView    DateTime
+  createAt    DateTime  @default(now())
+  createUser  String
+  userId       User  @relation(fields: [createUser], references: [id])
+}
