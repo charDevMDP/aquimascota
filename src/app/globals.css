@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.form-label{
+    @apply block text-xs text-gray-900 mb-0.5 font-extrabold
+  }
+  .form-field{
+    @apply flex rounded-md shadow-sm ring-1 border-none ring-gray-400  focus:ring-amber-500 
+  }
+  .form-input{
+    @apply w-full border-none focus:ring-amber-500 bg-slate-50 rounded-md py-1.5 pl-3 text-gray-900 placeholder:text-gray-300 text-sm placeholder:text-xs
+  }
+  .form-textarea{
+    @apply block w-full text-xs rounded-md focus:ring-amber-500 bg-slate-50 focus:border-transparent 
+  }

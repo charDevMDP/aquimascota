@@ -5,7 +5,7 @@ import TypePost from '@/ui/TypePost';
 
 const PostItem = ({post}:{ post:any}) => {
 
-  console.log(post)
+  //console.log(post)
 
   const checkAvatarUser = () => {
 
@@ -41,11 +41,9 @@ const PostItem = ({post}:{ post:any}) => {
     </div>
 
       <PostImgCover post={post} />
-      <div className='my-2'>
-        {
-         <TypePost type={post.typePost} />
-        }
-      </div>
+
+      <TypePost type={post.typePost} />
+     
       <div className='mx-4'>
       
       <div className='flex flex-col mb-4'>

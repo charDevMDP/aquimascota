@@ -3,7 +3,6 @@ import React, { useState } from 'react'
 
 const PostImgCover = ({post}:any) => {
 
-  console.log(post)
   const [imgPost, setimgPost] = useState(post.image ? post.image : '/ImgNoFound.png')
 
   
