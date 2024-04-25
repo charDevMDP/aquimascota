@@ -9,7 +9,7 @@
     "lint": "next lint",
     "preinstall": "npx only-allow pnpm"
   },
-  "prisma":{
+  "prisma": {
     "seed": "ts-node --compiler-options {\"module\":\"CommonJS\"} prisma/seed.ts"
   },
   "dependencies": {
@@ -17,17 +17,23 @@
     "@prisma/client": "^5.12.1",
     "bcryptjs": "^2.4.3",
     "clsx": "^2.1.0",
+    "leaflet": "^1.9.4",
+    "leaflet-defaulticon-compatibility": "^0.1.2",
     "next": "14.2.1",
     "next-auth": "5.0.0-beta.16",
+    "next-cloudinary": "^6.5.1",
     "prisma": "^5.12.1",
     "react": "^18",
     "react-dom": "^18",
     "react-icons": "^5.1.0",
+    "react-leaflet": "^4.2.1",
     "sonner": "^1.4.41",
-    "zod": "^3.22.4"
+    "zod": "^3.22.4",
+    "zustand": "^4.5.2"
   },
   "devDependencies": {
     "@types/bcryptjs": "^2.4.6",
+    "@types/leaflet": "^1.9.12",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
