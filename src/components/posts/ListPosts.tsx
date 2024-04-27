@@ -1,4 +1,3 @@
-import { prisma } from "@/utils/prisma";
 import { Post } from "@prisma/client";
 import PostItem from "./PostItem";
 import { getPosts } from "@/actions/posts.actions";
@@ -16,7 +15,7 @@ const ListPosts = async () => {
       {
         posts.length != 0 && 
         posts.map((post:Post) => (
-            <PostItem post={post} />
+            <PostItem key={post.id} post={post} />
           ))  
         }
     </div>    
