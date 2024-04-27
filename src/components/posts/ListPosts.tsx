@@ -1,11 +1,8 @@
 import { prisma } from "@/utils/prisma";
 import { Post } from "@prisma/client";
 import PostItem from "./PostItem";
+import { getPosts } from "@/actions/posts.actions";
 
-const getPosts = async () => {
-  const allposts = await prisma.post.findMany({ include: { userId: true}});
-  return allposts
-}
 
 const ListPosts = async () => {
 

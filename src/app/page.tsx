@@ -5,6 +5,7 @@ import React from 'react'
 const Home = async () => {
   const session = await auth();
 
+
   return (
     <main className="flex min-h-screen flex-col items-center p-24">
       <p className='mt-5 font-bold text-lg'>AquiMascotas</p>

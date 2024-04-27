@@ -5,7 +5,7 @@ import TypePost from '@/ui/TypePost';
 
 const PostItem = ({post}:{ post:any}) => {
 
-  //console.log(post)
+  console.log(post)
 
   const checkAvatarUser = () => {
 
@@ -13,7 +13,7 @@ const PostItem = ({post}:{ post:any}) => {
 
     
     if(post.userId.image){
-      avatar = post.userCreate.image
+      avatar = post.userId.image
     }else{
       avatar = '/avatar.png'
     }

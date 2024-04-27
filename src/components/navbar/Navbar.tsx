@@ -6,7 +6,7 @@ const Navbar = () => {
 
 
   return (
-    <nav className='container mx-auto px-5 rounded-md justify-between h-12 flex items-center text-white bg-amber-500'>
+    <nav className='px-5 rounded-md justify-between h-12 flex items-center text-white bg-amber-500 md:w-[80%] absolute'>
       <Link href={'/posts'}>
         <span className='font-bold hover:text-black'>AquiMascotas</span>
       </Link>

@@ -10,8 +10,6 @@ const User = async() => {
 
   const session = await auth();
 
-  console.log(session)
-
   return (
     <>
        { 
@@ -20,7 +18,7 @@ const User = async() => {
               <span className='text-xs'>
               {session?.user?.name}
               </span>
-              <Image alt='avatar' width={25} height={25} className='rounded-full' src={session.user?.image ? session.user.image : '/avatar.png'} /> 
+              <Image alt='avatar' width={25} height={25} className='rounded-full border bg-gray-200' src={session.user?.image ? session.user.image : '/avatar.png'} /> 
               <Link href={'/add'} className='hover:text-gray-900'> 
                 <IoMdAddCircleOutline className='w-5 h-5' />
               </Link> 

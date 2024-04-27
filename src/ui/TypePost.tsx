@@ -16,7 +16,7 @@ const TypePost = ({type}: {type: string}) => {
   
   return (
     
-      <div className='flex items-center justify-center bg-amber-500 rounded-sm px-5 text-center'>
+      <div className='my-2  flex items-center justify-center bg-amber-500 rounded-sm px-5 text-center'>
         <span className="uppercase text-xs text-white">{typefinal}</span>
       </div> 
     
