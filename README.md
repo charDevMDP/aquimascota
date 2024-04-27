@@ -9,6 +9,25 @@
 ### En una semana trate de desarrollar un aplicacion de mascotas perdidas y encontradas, esta muy verde todavia pero voy a ir mejorandola de a poco. 
 
 
+#### RESULTADO HASTA EL MOMENTO DESPLEGADO EN VERCEL:
+
+
+
+
+[AQUI MASCOTAS - WEB :earth_americas:  ](https://aquimascota.vercel.app/)
+
+* Credenciales para probar 
+
+
+| USUARIO | CONTRASEÑA |
+   |---|---|
+   | test@test.com | 123456 |
+
+-----
+
+**SI QUERES PROBAR EL CODIGO LOCALMENTE EN TU COMPUTADORA:**
+
+__CHECKEA ESTO__ :white_check_mark:
 
 
 > Para poder visualizar el projecto hay de clonarse el repo, configurar los variables de ambientes necesarias en un archivo .env 
