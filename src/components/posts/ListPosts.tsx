@@ -1,18 +1,12 @@
 import { prisma } from "@/utils/prisma";
-//import PostItem from "./PostItem";
 import { Post } from "@prisma/client";
 import PostItem from "./PostItem";
+import { getPosts } from "@/actions/posts.actions";
 
-const getPosts = async () => {
-  const allposts = await prisma.post.findMany({ include: { userId: true}});
-  return allposts
-}
 
 const ListPosts = async () => {
 
   const posts = await getPosts()
-
-  console.log(posts)
 
   if(posts.length == 0) return <p className="text-center mt-5">No hay publicaciones aun.</p>
 

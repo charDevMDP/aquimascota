@@ -1,24 +1,18 @@
 import { auth, signOut } from '@/auth'
+import Link from 'next/link';
 import React from 'react'
 
 const Home = async () => {
   const session = await auth();
 
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <p>AquiMascotas</p>
+    <main className="flex min-h-screen flex-col items-center p-24">
+      <p className='mt-5 font-bold text-lg'>AquiMascotas</p>
 
-      <pre className='text-center'>
-        { session && session?.user?.name}
-      </pre>
+      <p className='mt-5'>Bienvenidos a una web que busca ayudar a buscar y encontrar mascotas perdidas.</p>
 
-      <form action={async()=>{
-        'use server'
-        await signOut()
-      }}>
-        <button type='submit' className='bg-amber-500 px-4 py-2'>SALIR</button>
-      </form>
-
+      <Link className='bg-amber-500 text-white rounded-sm uppercase text-xs py-2 px-5 mt-5' href={'/posts'}>Ver publicaciones</Link>
     </main>
   );
 }

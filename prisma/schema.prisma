@@ -44,7 +44,7 @@ model User {
  
 model Post {
   id          Int @id @default(autoincrement())
-  name        String
+  name        String?
   image       String
   typePost    String
   typePet     String
@@ -53,4 +53,6 @@ model Post {
   createAt    DateTime  @default(now())
   createUser  String
   userId       User  @relation(fields: [createUser], references: [id])
+
+  @@map("posts")
 }

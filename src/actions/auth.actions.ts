@@ -7,6 +7,7 @@ import { LoginSchema, RegisterSchema } from "@/utils/schema";
 import bcrypt from 'bcryptjs'
 import { DEFAULT_LOGIN_REDIRECT } from "../../routes";
 import { AuthError } from "next-auth";
+import { redirect } from "next/navigation";
 
 export const register = async (values:any) => {
 
@@ -33,6 +34,7 @@ export const register = async (values:any) => {
   })
 
     return { success: 'Usuario creado exitosamente.'}
+    redirect('/')
 
  } catch (error) {
     return { error: 'Error al crear el usuario.'}

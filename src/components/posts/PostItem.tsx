@@ -13,7 +13,7 @@ const PostItem = ({post}:{ post:any}) => {
 
     
     if(post.userId.image){
-      avatar = post.userCreate.image
+      avatar = post.userId.image
     }else{
       avatar = '/avatar.png'
     }
@@ -41,11 +41,9 @@ const PostItem = ({post}:{ post:any}) => {
     </div>
 
       <PostImgCover post={post} />
-      <div className='my-2'>
-        {
-         <TypePost type={post.typePost} />
-        }
-      </div>
+
+      <TypePost type={post.typePost} />
+     
       <div className='mx-4'>
       
       <div className='flex flex-col mb-4'>
